@@ -311,6 +311,8 @@ function each(coll, f) {
   //Do not add a list item if the color value is non of the colors
   
   //DO NOT USE JQUERY
+
+  // Done Check q8 folder
   
   //================================================================================
   /*                              Q9                                            */

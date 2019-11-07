@@ -1,0 +1,25 @@
+.row {
+	display: flex;
+	flex-direction: column;
+}
+
+.row-h {
+	display: flex;
+}
+
+.col {
+	flex: 1 1 50%;
+	margin: 5%;
+}
+
+.red {
+	color: red;
+}
+
+.yellow {
+	color: yellow;
+}
+
+.blue {
+	color: blue;
+}
