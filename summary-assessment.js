@@ -60,7 +60,7 @@ function each(coll, f) {
   
   /*
     ===== Function Description ======
-    - Check if the input is a String and with length greater than 0
+    - Check if the input is a type of String and with length greater than 0
     - Input String is splitted based on space and converted into an array
     - Using @function map() in which returns a new array with the lengths of each word
       in the array 
@@ -87,7 +87,7 @@ function each(coll, f) {
   
   /*
     ===== Function Description ======
-    - Check if both inputs are String with length greater than 0
+    - Check if both inputs are type of String with length greater than 0
     - Input String is splitted and converted into an array
     - Using @function filter() in which returns a new array with the values the match
       the condition.
@@ -111,9 +111,24 @@ function each(coll, f) {
   //with only the words of length that are longer than 3.
   //solve it using the most appropriate helper functions(reduce,each,map,filter).
   // wordsLongerThanThree("Hello Mad World") //["Hello", "World"]
-  
+
+  /*
+    ===== Function Description ======
+    - Check if the input is type of String with length greater than 0
+    - Input String is splitted and converted into an array
+    - Using @function filter() in which returns a new array with the values the match
+      the condition.
+    - return the new array 
+  */
+
   function wordsLongerThanThree(str) {
-      // TODO: your code here 
+      if (str.length > 0 && typeof str === 'string') {
+          return filter(str.split(' '), function(val, key) {
+              return val.length > 3 ? val : '';
+          });
+      }
+
+      return 'Invalid input';
   }
   
   //=============================================================================
