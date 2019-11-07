@@ -223,7 +223,6 @@ function each(coll, f) {
 
     return pizz;
   }
-
   
   //=============================================================================
   /*                                  Q6                                      */
@@ -248,9 +247,36 @@ function each(coll, f) {
   */
   
   // Now, to make sure that you are actually reading, make a comment below this and type: Yes I am
-  
+  // Yes I am
   // Write your code here .....
   
+  function ReadingList() {
+    var instance = {};
+
+    instance.read = 0;
+    instance.unRead = 0;
+    instance.toRead = [];
+    instance.currentRead = '';
+    instance.readBooks = [];
+    instance.AddBook = _addBook;
+    instance.finishCurrentBook = _finishCurrentBook;
+
+    return instance;
+  }
+
+  var _addBook = function(name) {
+      this.toRead.push(name);
+      this.currentRead = name;
+      this.unRead += 1;
+  }
+
+  var _finishCurrentBook = function() {
+      this.readBooks.push(this.currentRead);
+      this.read += 1;
+      this.currentRead = this.toRead[0];
+      this.unRead -= 1;
+  }
+
   //=============================================================================
   /*                                  Q7                                       */
   //=============================================================================
