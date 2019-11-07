@@ -182,6 +182,48 @@ function each(coll, f) {
   // pizza.eatSlice();
   
   // Write your code here .....
+
+  function makePizza(crust, size, numberOfSlice) {
+    var _crust = crust;
+    var _size = size;
+    var _numberOfSlice = numberOfSlice;
+
+    return {
+        crust: _crust,
+        size: _size,
+        numberOfSlice: _numberOfSlice,
+        ingredients: [],
+        addIngredients: function(ing) {
+            if (ing !== undefined) {
+                this.ingredients.push(ing);
+                return ing + ' added';
+            }
+            return 'Add something';
+        },
+        displayIngredients: function() {
+            if (this.ingredients.length > 0) {
+                return 'The ingredients are : ' + this.ingredients.join(', ');
+            }
+            return 'Dude choose the ingredients first';
+        },
+        bakePizza: function() {
+            var vm = this;
+            setTimeout(function() {
+                console.log(`Your ${vm.crust} ${vm.size} ${vm.numberOfSlice} slice pizza is done`);
+            }, 2000);
+        },
+        eatSlice: function() {
+            if (this.numberOfSlice > 0) {
+                this.numberOfSlice -= 1;
+                return 'Enjoy';
+            }
+            return 'Pizza is over!';
+        }
+    }
+
+    return pizz;
+  }
+
   
   //=============================================================================
   /*                                  Q6                                      */
