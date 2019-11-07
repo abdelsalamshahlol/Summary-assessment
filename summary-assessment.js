@@ -141,11 +141,20 @@ function each(coll, f) {
   //repeatString('dog', 1); // => 'dog' 
   //repeatString('dog', 2); // => 'dog' + 'dog' => 'dogdog' 
   //repeatString('dog', 3); // => 'dog' + 'dog' + 'dog' => 'dogdogdog'
-  
-  function repeatString(str, count) { 
-   // TODO: your code here 
-  } 
-   
+
+  /*
+    ===== Function Description ======
+    - Push the function to the call stack as long as the count is greater than zero
+    - Return the string and decrease the count by 1 
+  */
+
+  function repeatString(str, count) {
+      if (count === 0) {
+          return '';
+      }
+
+      return str + repeatString(str, count - 1);
+  }
   
   //=============================================================================
   /*                                  Q5                                       */
