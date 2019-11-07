@@ -65,7 +65,7 @@ function each(coll, f) {
     - Using @function map() in which returns a new array with the lengths of each word
       in the array 
   */
-  
+
   function wordLengths(str) {
     if (str.length > 0 && typeof str === 'string') {
         return map(str.split(' '), function(val, key) {
@@ -85,8 +85,23 @@ function each(coll, f) {
   // countOccurrences("hello", "l"); // 2
   // countOccurrences("hello, world!", "l"); // 3
   
-  function countOccurrences(string, character) {
-      // your code is here
+  /*
+    ===== Function Description ======
+    - Check if both inputs are String with length greater than 0
+    - Input String is splitted and converted into an array
+    - Using @function filter() in which returns a new array with the values the match
+      the condition.
+    - return the length of returned array 
+  */
+
+  function countOccurrences(str, char) {
+    if (str.length > 0 && typeof str === 'string' && char.length > 0 && typeof char === 'string') {
+        return filter(str.split(''), function(val, key) {
+            return val === char ? val : '';
+        }).length;
+    }
+
+    return 'Invalid input';
   }
   
   //=============================================================================
