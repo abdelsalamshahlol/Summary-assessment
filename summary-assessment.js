@@ -312,7 +312,7 @@ function each(coll, f) {
   
   //DO NOT USE JQUERY
 
-  // Done Check q8 folder
+  // Done Check q8 
   
   //================================================================================
   /*                              Q9                                            */

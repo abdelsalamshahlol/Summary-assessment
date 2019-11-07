@@ -1,0 +1,37 @@
+.row {
+	display: flex;
+	flex-direction: column;
+}
+
+.col {
+	flex: 1 1 50%;
+	margin: 5%;
+}
+
+.black {
+	color: black;
+}
+
+.purple {
+	color: purple;
+}
+
+.green {
+	color: green;
+}
+
+.orange {
+	color: orange;
+}
+
+.red {
+	color: red;
+}
+
+.yellow {
+	color: yellow;
+}
+
+.blue{
+	color: blue;	
+}
