@@ -297,6 +297,32 @@ function each(coll, f) {
   
   // Write your code here .....
   
+  function makeSafe(limit) {
+      var _limit = limit;
+      var spaceLeft = _limit;
+      var safe = '';
+
+      return addItem = function(item, itemSize) {
+          if (['big', 'medium', 'small'].includes(itemSize)) {
+              if (itemSize === 'big' && spaceLeft >= 3) {
+                  spaceLeft -= 3;
+                  safe += item;
+              } else if (itemSize === 'medium' && spaceLeft >= 2) {
+                  spaceLeft -= 2;
+                  safe += item;
+              } else if (itemSize === 'small' && spaceLeft >= 1) {
+                  spaceLeft = -1;
+                  safe += item;
+              } else if (spaceLeft === 0) {
+                  return safe;
+              } else {
+                  return 'Can\'t fit';
+              }
+          }
+      }
+      return addItem
+  }
+
   //=============================================================================
   /*                                  Q8                                       */
   //=============================================================================
