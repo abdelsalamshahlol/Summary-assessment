@@ -58,8 +58,22 @@ function each(coll, f) {
   //solve it using the most appropriate helper functions(reduce,each,map,filter).
   //wordLengths("hello its me") // [5,3,2]
   
+  /*
+    ===== Function Description ======
+    - Check if the input is a String and with length greater than 0
+    - Input String is splitted based on space and converted into an array
+    - Using @function map() in which returns a new array with the lengths of each word
+      in the array 
+  */
+  
   function wordLengths(str) {
-      // TODO: your code here 
+    if (str.length > 0 && typeof str === 'string') {
+        return map(str.split(' '), function(val, key) {
+            return val.length;
+        });
+    }
+
+    return 'Invalid input';
   }
   
   //=============================================================================
